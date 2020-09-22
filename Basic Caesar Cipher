@@ -48,6 +48,5 @@ int main(void)
 		}
 		cout << "Your decrypted message : " << s << en;
 	}
-
 	return 0;
 }
