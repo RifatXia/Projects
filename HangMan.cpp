@@ -8,7 +8,7 @@ int main(void)
     srand(time(NULL));
     int x = rand() % n;
 
-    bool ans[10] = {};
+    bool ans[50] = {};
     bool dum = false;
 
     int turn = word[x].size() + 4;
