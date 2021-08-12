@@ -15,7 +15,7 @@ void Food :: genFood()
     pos.y = rand() % h + 1;
 }
 
-//Getting the current position of the food
+//Getting the current position of the food item
 coord Food :: getPos()
 {
     return pos;
