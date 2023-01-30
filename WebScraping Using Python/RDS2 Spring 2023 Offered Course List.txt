@@ -1,4 +1,4 @@
-Serial	Course	Section	Faculty	Time	Room	Seats Available	
+	Course	Section	Faculty	Time	Room	Seats Available	
 ['1.', 'ACT201', '1', 'AhU', 'ST', '01:50', 'PM', '-', '02:50', 'PM', 'NAC210', '0']
 ['2.', 'ACT201', '2', 'AhU', 'ST', '03:00', 'PM', '-', '04:00', 'PM', 'NAC1077', '1']
 ['3.', 'ACT201', '3', 'ASy', 'ST', '10:20', 'AM', '-', '11:20', 'AM', 'NAC209', '0']

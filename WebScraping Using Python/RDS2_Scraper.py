@@ -15,6 +15,7 @@ course_detail = soup.find('table', class_='oferedtable table table-bordered tabl
 
 for course in course_detail.find_all('thead'):
     result = course.find_all('th')
+    
     data = ''
     for info in result:
         data += info.text + '\t'
