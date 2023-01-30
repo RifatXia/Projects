@@ -18,10 +18,9 @@ for course in course_detail.find_all('thead'):
     data = ''
     for info in result:
         data += info.text + '\t'
-        # print(info.text, end='    ')
+    
     data += '\n'
     output_file.write(data)
-
 
 for course in course_detail.find_all('tbody'):
     result = course.find_all('tr')
