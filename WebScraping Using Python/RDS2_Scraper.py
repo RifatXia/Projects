@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+import os
 
-output_file = open('WebScraping Using Python/RDS2 Spring 2023 Offered Course List.txt', 'w')
+output_file = open("Projects/WebScraping Using Python/RDS2 Summer 2023 Offered Course List.txt", 'w')
 
 url = 'https://rds2.northsouth.edu/index.php/common/showofferedcourses'
 
