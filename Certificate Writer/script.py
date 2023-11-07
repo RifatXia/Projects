@@ -1,5 +1,9 @@
 from PIL import Image, ImageDraw, ImageFont
 
+# Function to convert text to title case
+def to_title_case(text):
+    return ' '.join(word.capitalize() for word in text.split())
+
 # Input PNG image
 input_image_path = "Certificate Writer/certificate.png"
 # Font path (replace with the path to your "Great Vibes" OTF file)
@@ -26,8 +30,11 @@ font = ImageFont.truetype(font_path, font_size)
 # Define the desired y-coordinate
 y = 550
 
-# Iterate through the list of names and create individual certificates
+# Iterate through the list of names, convert to title case, and create individual certificates
 for name in names:
+    # Convert the name to title case
+    title_case_name = to_title_case(name)
+
     # Create a copy of the input image
     certificate = image.copy()
 
@@ -35,14 +42,14 @@ for name in names:
     draw = ImageDraw.Draw(certificate)
 
     # Calculate the x-coordinate for center alignment
-    text_width, text_height = draw.textsize(name, font=font)
+    text_width, text_height = draw.textsize(title_case_name, font=font)
     image_width, image_height = certificate.size
     x = (image_width - text_width) // 2
 
-    # Add the name to the certificate with center alignment
-    draw.text((x, y), name, fill="black", font=font)
+    # Add the name in title case to the certificate with center alignment
+    draw.text((x, y), title_case_name, fill="black", font=font)
 
     # Save the individual certificate
-    certificate.save(os.path.join(output_folder, f"{name}.png"))
+    certificate.save(os.path.join(output_folder, f"{title_case_name}.png"))
 
 print("Certificate generation completed.")
